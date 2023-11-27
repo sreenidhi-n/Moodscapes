@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mood_journal.css') }}">
+    <title>Mood Journal</title>
+    <style>
+        button {
+            background-color: #990d35;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Journal <br>
+        {% if average_rating %}
+            Average Mood Rating: {{ average_rating }}
+        {% endif %}
+    </h1>
+    <div class="card-container">
+        {% for entry in mood_entries %}
+            <div class="card">
+                <h3>Date: {{ entry.date }}</h3>
+                <p>Mood Rating: {{ entry.mood_rating }}</p>
+                <p>Mood Reason: {{ entry.mood_reason }}</p>
+                <p>Sleep Quality: {{ entry.sleep_quality }}</p>
+                <p>Exercise Level: {{ entry.exercise_level }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <button onclick="goBack()">Go Back</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

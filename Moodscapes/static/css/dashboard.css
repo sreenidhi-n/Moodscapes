@@ -1,0 +1,64 @@
+/* Reset some default styles to ensure consistency across browsers */
+body,
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+
+/* Apply styles to the body element */
+body {
+  background-color: #fae6f3;
+  font-family: Tahoma, sans-serif;
+}
+
+/* Apply styles to the h1 element with class "h1" */
+.h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* Apply styles to the p element with class "para" */
+.para {
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+}
+
+/* Apply styles to the links (a elements) */
+.mini-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff8e8;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Apply hover effect to mini-cards */
+.mini-card:hover {
+  background-color: #990d35;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Styles for the icon inside mini-cards */
+.icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* You can define styles for the title element with class "title" if needed */
+.title {
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
+    <title class="title">Dashboard</title>
+  </head>
+  <body>
+    <h1 class="h1">Dashboard</h1>
+    <p class="para">Welcome, {{ current_user.username }}!</p>
+    <!-- Mini-sized cards with icons -->
+    <a href="{{ url_for('mood_entry') }}" class="mini-card">
+      <span class="icon">&#128522;</span>
+      Log Mood
+    </a>
+
+    <a href="{{ url_for('mood_journal') }}" class="mini-card">
+      <span class="icon">&#128221;</span>
+      Mood Journal
+    </a>
+
+    <a href="{{ url_for('music_recommendations') }}" class="mini-card">
+      <span class="icon">&#127925;</span>
+      Music Recommendations
+    </a>
+
+    <a href="{{ url_for('user_profile') }}" class="mini-card">
+      <span class="icon">&#128100;</span>
+      User Profile
+    </a>
+
+    <a href="{{ url_for('logout') }}" class="mini-card">
+      <span class="icon">&#128075;</span>
+      Logout
+    </a>
+  </body>
+</html>

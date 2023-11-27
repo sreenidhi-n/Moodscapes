@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>User Registration</h1>
+    </header>
+
+    <main>
+        <form method="POST" action="{{ url_for('register') }}">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            
+            <button type="submit">Register</button>
+        </form>
+        
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Entry</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background: linear-gradient(to right, #990D35, #FAE6F3);
+            color: #2C3E50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-family: Monsterrat;
+            margin-bottom: 20px;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        form {
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #990D35;
+        }
+
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 2px solid #990D35;
+            border-radius: 5px;
+            background-color: #ECF0F1;
+            color: #2C3E50;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #C0392B;
+        }
+
+        input[type="submit"] {
+            background-color: #990D35;
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #C0392B;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Entry</h1>
+    <form method="POST" action="{{ url_for('mood_entry') }}">
+        <label for="mood_rating">Mood Rating (1-10):</label>
+        <input type="number" name="mood_rating" min="1" max="10" required>
+        <br>
+
+        <label for="mood_reason">Why do you feel this way?</label>
+        <textarea name="mood_reason" rows="4" cols="50" required></textarea>
+        <br>
+
+        <label for="sleep_quality">Sleep Quality:</label>
+        <select name="sleep_quality" required>
+            <option value="poor">Poor</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+        </select>
+        <br>
+
+        <label for="exercise_level">Exercise Level:</label>
+        <select name="exercise_level" required>
+            <option value="none">None</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="intense">Intense</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
