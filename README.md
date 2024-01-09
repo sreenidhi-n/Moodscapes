@@ -53,4 +53,4 @@ This project is a mood-based music recommendation system developed using the Fla
     ```
       python app.py
     ```
-7. Access the application at [localhost](http://localhost:5000)http://localhost:5000
+7. Access the application at [http://localhost:5000](http://localhost:5000)
