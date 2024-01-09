@@ -50,7 +50,7 @@ This project is a mood-based music recommendation system developed using the Fla
       flask db upgrade
     ```
 6. Run the application
-```
-  python app.py
-```
+    ```
+      python app.py
+    ```
 7. Access the application at [localhost](http://localhost:5000)http://localhost:5000
