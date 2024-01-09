@@ -11,12 +11,12 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:SreenidhiN02@localhost/dbma_proj'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:your_username@localhost/you_database'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 # Initialising the API
-sp_oauth = SpotifyOAuth(client_id='d930a40ed6114cf8ba8959078f1055a7', client_secret='501ecf3273dd4f868c1c0524279cbf6a', redirect_uri='http://127.0.0.1:5000/callback', scope='user-library-read playlist-read-private')
+sp_oauth = SpotifyOAuth(client_id='your_client_id_here', client_secret='your_client_secret_here', redirect_uri='http://127.0.0.1:5000/callback', scope='user-library-read playlist-read-private')
 sp = spotipy.Spotify(auth_manager=sp_oauth)
 
 #Creation of tables
@@ -225,8 +225,8 @@ def get_seed_genres_based_on_mood_rating(mood_rating):
 @login_required
 def music_recommendations():
     sp_oauth = SpotifyOAuth(
-        client_id='d930a40ed6114cf8ba8959078f1055a7',
-        client_secret='501ecf3273dd4f868c1c0524279cbf6a',
+        client_id='your_client_id_here',
+        client_secret='your_client_secret_here',
         redirect_uri='http://127.0.0.1:5000/callback',
         scope='user-library-read playlist-read-private' 
     )
