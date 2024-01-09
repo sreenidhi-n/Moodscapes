@@ -34,7 +34,7 @@ This project is a mood-based music recommendation system developed using the Fla
 1. Clone the repository:
     ```
     git clone https://github.com/sreenidhi-n/moodscapes.git
-    cd moodscapes
+    cd Moodscapes
     ```
 2. Set up the virtual environment
     ```
