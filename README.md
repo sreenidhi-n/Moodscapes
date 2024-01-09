@@ -3,7 +3,7 @@ This project is a mood-based music recommendation system developed using the Fla
 
 ## Features
 - **User Authentication**: Users can log in, register, and update their account information.
-- Mood Logging**: Users can log their mood entries, providing information on mood rating, reason, sleep quality, and exercise level.
+- **Mood Logging**: Users can log their mood entries, providing information on mood rating, reason, sleep quality, and exercise level.
 - **Average Mood Rating**: The system calculates and displays the average mood rating for each user.
 - **Music Recommendations**: Utilizing the Spotipy API, the system recommends 5 songs based on the user's latest mood rating.
 - **CRUD Operations**: Basic CRUD operations are implemented for managing user credentials, mood entries, playlists, and tracks.
