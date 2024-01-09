@@ -1,4 +1,4 @@
-# Moodscapes 
+# moodscapes 
 This project is a mood-based music recommendation system developed using the Flask-MySQL framework and integrated with the Spotipy API.  
 
 ## Features
@@ -33,8 +33,8 @@ This project is a mood-based music recommendation system developed using the Fla
 ## How to run the virtual environment? 
 1. Clone the repository:
     ```
-    git clone https://github.com/sreenidhi-n/Moodscapes.git
-    cd Moodscapes
+    git clone https://github.com/sreenidhi-n/moodscapes.git
+    cd moodscapes
     ```
 2. Set up the virtual environment
     ```
@@ -45,12 +45,12 @@ This project is a mood-based music recommendation system developed using the Fla
 4. Configure MySQL database
 5. Run the migration
     ```
-      flask db init
-      flask db migrate -m "Initial migration"
-      flask db upgrade
+    flask db init
+    flask db migrate -m "Initial migration"
+    flask db upgrade
     ```
 6. Run the application
     ```
-      python app.py
+    python app.py
     ```
-7. Access the application at [http://localhost:5000](http://localhost:5000)
+7. Access the application at [http://127.0.0.1/](http://127.0.0.1/)
